@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <title>SHEIN</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.6/dist/css/splide.min.css"
+    />
+    <link rel="stylesheet" href="./css/cart.css" />
+  </head>
+  <body>
+    <!-- Navegation bar -->
+    <header class="navigation-bar">
+      <nav class="nav">
+        <div id="logo" class="logo-container"></div>
+        <div class="hamburger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-links">
+          <li class="item-link">
+            <a href="index.html" class="link">Home</a>
+          </li>
+          <li class="item-link">
+            <a href="store.html" class="link">Tienda</a>
+          </li>
+          <li class="item-link"><a href="faq.html" class="link">FAQ</a></li>
+          <li class="item-link">
+            <a href="about-us.html" class="link">Sobre nosotros</a>
+          </li>
+          <li class="item-link">
+            <a href="cart.html" class="link">
+              <i class="fa-solid fa-basket-shopping"></i>
+              <small class="cart-number">0</small>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Content Section -->
+    <main>
+      <!-- Products coming from Cart.js -->
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer-basic">
+      <div class="social">
+        <a href="#">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-snapchat"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="#">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+      </div>
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="index.html">Home</a></li>
+        <li class="list-inline-item"><a href="store.html">Tienda</a></li>
+        <li class="list-inline-item"><a href="about-us.html">Sobre Mi</a></li>
+        <li class="list-inline-item"><a href="faq.html">FAQ</a></li>
+      </ul>
+      <p class="copyright">SHEIN © 2022</p>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/c96beed14c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/global.js" defer></script>
+    <script src="./js/cart.js" defer></script>
+    <script src="./js/success.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.6/dist/js/splide.min.js"
+      defer
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-intersection@0.2.0/dist/js/splide-extension-intersection.min.js"></script>
+  </body>
+</html>

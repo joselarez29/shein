@@ -1,0 +1,101 @@
+@import url('./global.css');
+/* Navigation Bar Section */
+@import url('./header.css');
+/* Spinner */
+@import url('./spinner.css');
+/* Pagination Section */
+@import url('./pagination.css');
+/* Footer Section */
+@import url('./footer.css');
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 4rem;
+  min-height: calc(100vh - 38rem);
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  min-height: 330px;
+  max-width: 415px;
+}
+
+.card-head img {
+  width: 100%;
+  height: 100%;
+}
+
+.card-body {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+.card-body .details {
+  display: flex;
+  flex-flow: column;
+}
+
+.details > * {
+  width: 100%;
+}
+
+.details .product-description {
+  height: 60px;
+}
+
+.details .product-cost {
+  font-weight: bold;
+  font-size: large;
+}
+
+.card-body .add-to-cart {
+  align-self: flex-end;
+  background-color: black;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid black;
+}
+.card-body .add-to-cart:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  /* background-color: white;
+  color: black; */
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .card {
+    min-height: 225px;
+  }
+  
+  .details {
+    margin-bottom: .5rem;
+  }
+
+  .details .product-description {
+    font-size: smaller;
+    height: 50px;
+    
+  }
+  .details .product-cost {
+    font-weight: bold;
+    /* font-size: medium; */
+    text-align: end;
+  }
+
+  .add-to-cart {
+    width: 100%;
+  }
+}
+
+

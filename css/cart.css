@@ -1,0 +1,109 @@
+@import url('./global.css');
+/* Navigation Bar Section */
+@import url('./header.css');
+/* Footer Section */
+@import url('./footer.css');
+/* Succes Animation */
+@import url('./success.css');
+
+main {
+  width: 80%;
+  margin: 0 auto;
+}
+
+section.product {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid black;
+  padding: 1rem;
+}
+
+.img-container {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.img-container img {
+  height: 100%;
+  max-height: 280px;
+}
+
+.product-details {
+  width: 50%;
+  display: flex;
+  flex-flow: column;
+  padding-left: 2rem;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.product-details > * {
+  width: 100%;
+}
+
+.total-data {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.total-data > *:not(.checkout-btn) {
+  font-size: 1.5rem;
+}
+
+.total-data > .tax {
+  font-size: large;
+}
+
+.checkout-btn {
+  all: unset;
+  margin-top: 1rem;
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-transform: uppercase;
+}
+
+.checkout-btn:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
+h2.notification {
+  min-height: calc(100vh - 27rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 3rem;
+  text-align: center;
+}
+
+/* Tablets */
+@media only screen and (max-width: 1023px) {
+  .img-container img {
+    max-height: 250px;
+  }
+}
+
+/* Phones */
+@media only screen and (max-width: 767px) {
+  main {
+    width: 100%;
+  }
+
+  .img-container img {
+    max-height: 170px;
+  }
+
+  .product-details {
+    padding-left: 1rem;
+    font-size: 0.9rem;
+  }
+}

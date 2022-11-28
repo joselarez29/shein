@@ -1,0 +1,198 @@
+body.hidden {
+  overflow: hidden;
+}
+
+nav {
+  height: 6rem;
+  width: 100%;
+  display: flex;
+}
+
+/*Styling Links*/
+.nav-links {
+  display: flex;
+  list-style: none;
+  width: 88vw;
+  padding: 0 0.7vw;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.nav-links li a {
+  text-decoration: none;
+  margin: 0 0.7vw;
+}
+.nav-links li {
+  position: relative;
+}
+
+/*Styling Hamburger Icon*/
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background: black;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+.hamburger {
+  display: none;
+}
+
+/*Stying for small screens*/
+@media screen and (max-width: 800px) {
+  nav {
+    position: absolute;
+    z-index: 3;
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+    transition: all 0.7s ease;
+  }
+  .nav-links {
+    position: absolute;
+    background: white;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 4rem 0;
+    clip-path: circle(50px at 90% -20%);
+    -webkit-clip-path: circle(50px at 90% -10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+  }
+  .nav-links.open {
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    pointer-events: all;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  li.fade {
+    opacity: 1;
+  }
+
+  #logo {
+    width: 90%!important;
+    margin: auto;
+  }
+}
+/*Animating Hamburger Icon on Click*/
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+  /* transition: all 0.7s ease; */
+  width: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+header.navigation-bar {
+  width: 100%;
+  height: 6rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo {
+  height: 100%;
+  display: inline-block;
+  width: 20%;
+  background: url('../assets/images/logo.png') center center;
+  background-size: cover;
+}
+
+ul.item-links {
+  height: inherit;
+  width: 100%;
+}
+
+ul.item-links {
+  display: flex;
+  align-items: center;
+}
+
+li.item-link {
+  list-style: none;
+  font-size: larger;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul:not(.open) .item-link:not(:last-child) {
+  margin-left: 2rem;
+}
+
+li.item-link:last-child {
+  font-size: xx-large;
+}
+
+li.item-link:last-child a.link {
+  position: relative;
+}
+li.item-link .cart-number {
+  position: absolute;
+  left: 9px;
+  bottom: 6px;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  font-size: small;
+  font-weight: bold;
+}
+
+a.link {
+  text-decoration: none;
+  color: black;
+}
+
+/* Menu */
+.menu {
+  display: none; /* override /dist css */
+}
+
+/* From Tablet, Laptops & PC */
+@media only screen and (min-width: 768px) {
+  /* Underline Stroke animation */
+  nav ul li.item-link:not(:last-child) a,
+  nav ul li.item-link:not(:last-child) a:after,
+  nav ul li.item-link:not(:last-child) a:before {
+    transition: width 0.5s;
+  }
+
+  nav ul.nav-links li.item-link:not(:last-child) a.link {
+    position: relative;
+  }
+  nav ul.nav-links li.item-link:not(:last-child) a.link:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: black;
+    height: 2px;
+  }
+  nav ul.nav-links li.item-link:not(:last-child) a.link:hover:after {
+    width: 100%;
+  }
+}

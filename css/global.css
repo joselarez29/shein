@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'Arvo';
+  src: url('../assets/fonts/Arvo/Arvo-Regular.ttf');
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arvo;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  padding: 2rem 5rem;
+  min-height: 100vh;
+}
+
+main {
+  width: 100%;
+  min-height: calc(100vh - 27rem); /* 27rem from Body, Header & Footer */
+  padding-bottom: 4rem;
+  position: relative;
+}
+
+/* Tablets View */
+@media only screen and (max-width: 1023px) {
+  body {
+    padding: 2rem 3rem;
+  }
+}
+
+/* Phones View */
+@media only screen and (max-width: 767px) {
+  body {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.larger {
+  font-size: larger;
+}
